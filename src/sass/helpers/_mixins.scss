@@ -1,0 +1,54 @@
+@mixin breakPoints($point) {
+    @if $point =="maxMobile" {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $point =="maxSmall" {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @else if $point =="maxMedium" {
+        @media screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $point =="exception" {
+        @media screen and (min-width: 576px) {
+            @content;
+        }
+    }
+    @else if $point =="minMobile" {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point =="minSmall" {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point =="minMedium" {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else {
+        @error "#{$point} Is Not Found!";
+    }
+}
+
+@mixin prefixer($prop, $value, $prefixes: (webkit, moz, o, ms)) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $prop}: $value;
+    }
+    #{$prop}: #{$value};
+}
+
+@mixin makeItFlex($justify, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    gap: #{$gap}px;
+}

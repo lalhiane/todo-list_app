@@ -1,2 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
+body {
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(#67E5CD, #4C84E5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Roboto", sans-serif;
+}
+
+.todo-app .todos .todo .delete-btn, .todo-app form .submit-btn {
+  width: 50px;
+  border-left: none !important;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  color: white;
+  cursor: pointer;
+}
+
+.todo-app .foot .todos-info, .todo-app .todos .todo .todo-title {
+  width: calc(100% - 50px);
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  letter-spacing: 1px;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.todo-app {
+  width: 500px;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+.todo-app .main-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.todo-app form {
+  margin-bottom: 20px;
+  display: flex;
+}
+.todo-app form input, .todo-app form .submit-btn {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.todo-app form input:focus,
+.todo-app form .submit-btn:focus {
+  outline: none;
+}
+.todo-app form input {
+  width: calc(100% - 50px);
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  letter-spacing: 1px;
+}
+.todo-app form .submit-btn {
+  background-color: #8E4AE7;
+}
+.todo-app .todos .todo {
+  margin-bottom: 20px;
+  display: flex;
+}
+.todo-app .todos .todo .todo-title,
+.todo-app .todos .todo .delete-btn {
+  padding: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  border-radius: 6px;
+}
+.todo-app .todos .todo .delete-btn {
+  background-color: #E74E40;
+}
+.todo-app .todos .todo .delete-btn:focus {
+  outline: none;
+}
+.todo-app .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10pxpx;
+}
+@media screen and (max-width: 767px) {
+  .todo-app .foot {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+}
+.todo-app .foot .todos-info {
+  line-height: 1.6;
+}
+@media screen and (max-width: 767px) {
+  .todo-app .foot .todos-info {
+    width: 100%;
+  }
+}
+.todo-app .foot .clear-btn {
+  padding: 10px 17px;
+  background-color: #8E4AE7;
+  border: none;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  color: white;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .todo-app .foot .clear-btn {
+    width: 100%;
+  }
+}
 /*# sourceMappingURL=main.css.map */

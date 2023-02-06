@@ -1,0 +1,86 @@
+.todo-app {
+    width: 500px;
+    max-width: 100%;
+    padding: $pd-20;
+    border-radius: $radius;
+    background-color: white;
+    box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+    .main-title {
+        margin-bottom: $mg-20;
+        font-size: 22px;
+        letter-spacing: 1px;
+    }
+    form {
+        margin-bottom: $mg-20;
+        display: flex;
+        input, .submit-btn {
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+            border-radius: $radius;
+        }
+        input:focus,
+        .submit-btn:focus {
+            outline: none;
+        }
+        input {
+            width: calc(100% - 50px);
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            letter-spacing: 1px;
+        }
+        .submit-btn {
+            @extend %btn;
+            background-color: $main-clr;
+        }
+    }
+    .todos {
+        .todo {
+            margin-bottom: $mg-20;
+            display: flex;
+            .todo-title,
+            .delete-btn {
+                padding: 10px;
+                border: 1px solid #ddd;
+                font-size: 16px;
+                border-radius: $radius;
+            }
+            .todo-title {
+                @extend %h3-title;
+            }
+            .delete-btn {
+                @extend %btn;
+                background-color: $secondary-clr;
+            }
+            .delete-btn:focus {
+                outline: none;
+            }
+        }
+    }
+    .foot {
+        @include makeItFlex(space-between, 10px);
+        @include breakPoints("maxMobile") {
+            flex-direction: column;
+            row-gap: $mg-20;
+        }
+        .todos-info {
+            @extend %h3-title;
+            line-height: 1.6;
+            @include breakPoints("maxMobile") {
+                width: 100%;
+            }
+        }
+        .clear-btn {
+            padding: 10px 17px;
+            background-color: $main-clr;
+            border: none;
+            border-radius: $radius;
+            letter-spacing: 1px;
+            color: white; 
+            cursor: pointer; 
+            @include breakPoints("maxMobile") {
+                width: 100%;
+            }      
+        }
+    }
+}

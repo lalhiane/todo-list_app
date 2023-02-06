@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List App</title>
+    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <div class="todo-app">
+        <h2 class="main-title">Todo App</h2>
+        <form action="#" id="todo-form">
+            <input type="text" class="todoInput" placeholder="Add Your New Todo">
+            <button type="submit" class="fa-solid fa-plus submit-btn"></button>
+        </form>
+        <div class="todos"></div>
+        <div class="foot">
+            <h3 class="todos-info">You have 4 pendding tasks</h3>
+            <button class="clear-btn">Clear</button>
+        </div>
+    </div>
     <script src="js/main.js"></script>
 </body>
 </html>
