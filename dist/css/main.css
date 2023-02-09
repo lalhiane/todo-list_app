@@ -28,7 +28,7 @@ body {
   cursor: pointer;
 }
 
-.todo-app .foot .todos-info, .todo-app .todos .todo .todo-title {
+.todo-app .foot .todos-info, .todo-app .todos .todo .label {
   width: calc(100% - 50px);
   border-top-right-radius: 0 !important;
   border-bottom-right-radius: 0 !important;
@@ -77,12 +77,47 @@ body {
   margin-bottom: 20px;
   display: flex;
 }
-.todo-app .todos .todo .todo-title,
+.todo-app .todos .todo .label,
 .todo-app .todos .todo .delete-btn {
   padding: 10px;
   border: 1px solid #ddd;
   font-size: 16px;
   border-radius: 6px;
+}
+.todo-app .todos .todo .label {
+  position: relative;
+}
+.todo-app .todos .todo .label::before {
+  content: "";
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+}
+.todo-app .todos .todo .label::after {
+  content: "";
+  position: absolute;
+  top: 49%;
+  left: 13px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8E4AE7;
+  border: 2px solid #8E4AE7;
+  display: none;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.todo-app .todos .todo input {
+  display: none;
+}
+.todo-app .todos .todo input:checked + .label::after {
+  display: block;
 }
 .todo-app .todos .todo .delete-btn {
   background-color: #E74E40;
